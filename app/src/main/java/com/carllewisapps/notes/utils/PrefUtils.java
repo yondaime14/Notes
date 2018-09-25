@@ -22,7 +22,10 @@ public class PrefUtils {
         return getSharedPref(context).getString("API_KEY", null);
     }
 
-    public static String storeApiKey(Context context) {
-        return
+    public static void storeApiKey(Context context, String apiKey) {
+
+        SharedPreferences.Editor editor = getSharedPref(context).edit();
+        editor.putString("API_KEY", apiKey);
+        editor.apply();
     }
 }
