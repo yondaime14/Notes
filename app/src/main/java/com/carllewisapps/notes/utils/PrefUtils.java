@@ -21,4 +21,8 @@ public class PrefUtils {
     public static String getApiKey(Context context) {
         return getSharedPref(context).getString("API_KEY", null);
     }
+
+    public static String storeApiKey(Context context) {
+        return
+    }
 }
