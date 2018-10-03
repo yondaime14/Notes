@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingBottom="@dimen/dimen_10"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingTop="@dimen/dimen_10"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dot_height"
+        android:layout_marginEnd="@dimen/dot_margin_right"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textSize="@dimen/dot_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/timestamp"
+        android:textSize="@dimen/timestamp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/dot_margin_right"
+        app:layout_constraintStart_toEndOf="@id/dot" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/note_list_text"
+        android:textSize="@dimen/note_list_text"
+        android:layout_marginStart="@dimen/dot_margin_right"
+        app:layout_constraintTop_toBottomOf="@id/timestamp"
+        app:layout_constraintStart_toEndOf="@id/dot" />
+
+</android.support.constraint.ConstraintLayout>
