@@ -44,8 +44,7 @@ public interface ApiService {
     Completable updateNotes(@Path("id") int noteId, @Field("note") String note);
 
     // Delete note
-    @DELETE
-            ("notes/{id}")
+    @DELETE("notes/{id}")
     Completable deleteNote(@Path("id") int noteId);
 
 
